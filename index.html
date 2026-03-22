@@ -1,0 +1,133 @@
+<!-- Declares the document type and HTML5 version-->
+<!DOCTYPE html>
+<!-- Root element of the webpage -->
+<html lang="en">
+
+<!-- ====================
+        Head Section 
+======================== -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title Displayed in the browser tab -->
+    <title>Portfolio Website</title>
+    <!-- Links external CSS file for styling -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<!-- ============================
+    Main content of the webpage
+=================================-->
+<body>
+    
+    <!-- Header Section -->
+    <header>
+        <h1>Yamini Mishra</h1>
+        <p>Aspiring Web Developer</p>
+    </header>
+
+    <!--Navigation Menu -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#project">Project</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!--====================
+            Home Section 
+    ========================-->
+    <section id ="home">
+        <!-- Paragraph describing Hobby -->
+        <h2>Exploring New Technologies</h2>
+        <p>Exploring new technologies allows me to stay aligned with the rapidly evolving Tech Industry.<br>
+        Learning new frameworks, tools, and programming concepts strengthens my adaptability and helps me continuously enhance my technical capabilities.</p>
+
+        <!-- List including three benefits of the Hobby -->
+        <ol id="benefitsList">
+            <li>Keeps me updated with the industry trend.</li>
+            <li>Improves adaptability and learning speed.</li>
+            <li>Expands my technical skill set.</li>
+        </ol>    
+
+        <!-- Adds new benefits of the Hobby in the list -->
+        <input type="text" id="hobbyInput" placeholder="Enter Benefits">
+        <button id="addBtn">Add Benefits</button>
+    </section>
+
+    <!--======================
+            About Section
+    ===========================-->
+    <section id="about">
+        <!-- Short Bio -->
+        <h2>About Me</h2>
+        <p>
+            I am a BCA student with a strong interest in web development and software technologies.<br>
+            I am continuously building my skills in HTML, CSS, JavaScript, and programming fundamentals.<br>
+            My goal is to become a skilled developer who can build efficient and user-friendly applications.
+        </p>
+    </section>
+
+    <!--=========================
+            Project Section 
+    =============================-->
+    <section id="project">
+        <!-- Showcasing three projects -->
+        <h2>Projects</h2>
+        <div class="project-container">
+            <!-- Project One -->
+            <div class="project-card">
+                <h3>Timer-Challenge</h3>
+                <p>A simple and interactive timer applicaton that allows users to start, pause, and reset timer-based challenges.</p>
+                <a href="https://github.com/yaminimishra08/Timer-Challenge">View Project</a>
+            </div>
+            
+            <!-- Project Two -->
+            <div class="project-card">
+                <h3>FAQ</h3>
+                <p>A responsive FAQ section designed to display commonly asked questions.</p>
+                <a href="https://github.com/yaminimishra08/FAQ">View Project</a>
+            </div>
+            
+            <!-- Project Three -->    
+            <div class="project-card">
+                <h3>Capstone Project</h3>
+                <p>Capstone Project: Money Manager App for tracking income and expenses, categorizing transactions, and generating financial summaries using HTML, CSS, and JavaScript.</p>
+                <a href="https://github.com/yaminimishra08/Capstone-Project">View Project</a>
+            </div>
+        </div>
+    </section>
+
+    <!--========================
+            Contact Section
+    ============================-->
+    <section id="contact">
+        <h2>Contact Me</h2>
+
+        <!-- Simple Form -->
+        <form>
+            <input type="text" placeholder="Name" required>
+            <input type="email" placeholder="Email Id" required>
+            <textarea placeholder="Message" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+<!-- =================
+    Footer Section
+ =====================-->
+<footer>
+    <p>&copy; 2026 Yamini Mishra. All rights reserved.</p>
+    <a href="https://www.linkedin.com/in/yaminimishra0804/">LinkedIn</a>
+    <a href="https://github.com/yaminimishra08/">GitHub</a>
+
+    <!-- Ads Current Date and Time-->
+    <p>Current Date & Time:<span id="datetime"></span></p>
+</footer>
+
+<!-- Links external JS file -->
+<script src="script.js"></script>
+</body>
+</html>

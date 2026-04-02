@@ -6,11 +6,21 @@ document.addEventListener("DOMContentLoaded", function() {
     const contactForm = document.querySelector("form");
     const dateTime=document.getElementById("datetime"); //update date and time
 
-    //Adds a new benefits to the list
-    addButton.addEventListener("click",function() //respond only when use click mouse
+    // Handle adding a new benefit to the list when user clicks the button
+    addButton.addEventListener("click",function()
     {
         const benefitText=benefitInput.value.trim();
-        if(benefitText === "")return; //prevent from blank entries
+        // Prevent empty or whitespace-only entries from being added
+        if (benefitText.length < 5) {
+            alert("Benefit must be at least 5 characters long.");
+            return;
+        }
+        
+        const validText = /^[a-zA-Z0-9\s.,'-]+$/;
+        if (!validText.test(benefitText)) {
+            alert("Please enter valid characters only.");
+            return;
+        }
 
         const listItem=document.createElement("li");
         listItem.textContent = benefitText; //adds the new list
@@ -18,7 +28,9 @@ document.addEventListener("DOMContentLoaded", function() {
         //Create a delete button for the list item (let user remove)
         const deleteBtn = document.createElement("button");
         deleteBtn.textContent="Delete";
-        deleteBtn.onclick=function()
+        deleteBtn.addEventListener("click", function() {
+            listItem.remove();
+        });
         {
             listItem.remove();
         };
@@ -34,17 +46,31 @@ document.addEventListener("DOMContentLoaded", function() {
     contactForm.addEventListener("submit",function(e)
     {
         e.preventDefault();
-        alert("Form is Submitted Successfully!");
+        alert("Thanks! Your message has been submitted successfully. I'll get back to you soon.");
     });
     
     //DATE AND TIME
     //Display current date and time in the footer
-    function updateTime()
-    {
-        const now= new Date();
-        dateTime.textContent=now.toLocaleString();
-    }
+    function updateDateTime() {
+    const now = new Date();
 
-    updateTime();
-    setInterval(updateTime, 1000);
+    const days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+    const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+
+    const dayName = days[now.getDay()];
+    const date = String(now.getDate()).padStart(2, '0');
+    const month = months[now.getMonth()];
+    const year = now.getFullYear();
+
+    const hours = String(now.getHours()).padStart(2, '0');
+    const minutes = String(now.getMinutes()).padStart(2, '0');
+    const seconds = String(now.getSeconds()).padStart(2, '0');
+
+    const formatted = `${dayName}, ${date} ${month} ${year}, ${hours}:${minutes}:${seconds}`;
+
+    dateTime.textContent = formatted;
+}
+
+setInterval(updateDateTime, 1000);
+updateDateTime();
 });

@@ -39,6 +39,7 @@
     <!--====================
             Home Section 
     ========================-->
+    <main>
     <section id ="home">
         <!-- Paragraph describing Hobby -->
         <h2>Exploring New Technologies</h2>
@@ -54,7 +55,7 @@
 
         <!-- Adds new benefits of the Hobby in the list -->
        <label for="hobbyInput">Add a benefit</label>
-       <input type="text" id="hobbyInput">
+       <input type="text" id="hobbyInput" placeholder="Add a new benefit">
        <button id="addBtn" aria-label="Add benefit to list">Add Benefits</button>
     </section>
 
@@ -74,7 +75,6 @@
     <!--=========================
             Projects Section 
     =============================-->
-    <main>
     <section id="projects">
         <!-- Showcasing three projects -->
         <h2>Projects</h2>
@@ -110,11 +110,11 @@
 
         <!-- Simple Form -->
         <form>
-            <label for="name">Name</label>
+            <label for="name">Your Name</label>
             <input id="name" type="text" placeholder="Your Name" required>
-            <label for="email">Email</label>
+            <label for="email">Your Email</label>
             <input id="email" type="email" placeholder="Your Email" required>
-            <label for="message">Message</label>
+            <label for="message">Your Message</label>
             <textarea id="message" placeholder="Your Message" required></textarea>
             <button type="submit">Submit</button>
         </form>

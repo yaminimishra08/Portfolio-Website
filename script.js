@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const dateTime=document.getElementById("datetime"); //update date and time
 
     // Handle adding a new benefit to the list when user clicks the button
-    addButton.addEventListener("click",function()
+    addButton.addEventListener("click",function() // Validate and append a new benefit item with delete functionality
     {
         const benefitText=benefitInput.value.trim();
         // Prevent empty or whitespace-only entries from being added
@@ -31,9 +31,7 @@ document.addEventListener("DOMContentLoaded", function() {
         deleteBtn.addEventListener("click", function() {
             listItem.remove();
         });
-        {
-            listItem.remove();
-        };
+        
         listItem.appendChild(deleteBtn); //let user delete the item
         benefitsList.appendChild(listItem); //shown in the web page
 
@@ -46,11 +44,11 @@ document.addEventListener("DOMContentLoaded", function() {
     contactForm.addEventListener("submit",function(e)
     {
         e.preventDefault();
-        alert("Thanks! Your message has been submitted successfully. I'll get back to you soon.");
+        alert("Thanks! Your message has been submitted successfully.");
     });
     
     //DATE AND TIME
-    //Display current date and time in the footer
+    //Display current date and time in the footer   
     function updateDateTime() {
     const now = new Date();
 

@@ -6,7 +6,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap");
 
 h1, h2 {
-  font-family: 'Playfair Display', serif;
+  font-family:'Playfair Display', serif; /*Google fonts*/
 }
 
 /*Styling body of the page*/
@@ -22,7 +22,7 @@ h1, h2 {
 body
 {
     /*Sets overall background & font */
-    font-family:"Poppins",sans-serif; /*Goggle Fonts*/
+    font-family:"Poppins",sans-serif; /*Google Fonts*/
     background-color: #fff1f2; /*Sets overall background color*/
     color:#3f3f46;
     line-height:1.6;
@@ -34,10 +34,11 @@ Center main layout content
 section,
 header,
 nav,
-footer
+footer,
+main
 {
     max-width: 1100px;
-    margin:auto;
+    margin: auto;
 }
 
 /*==============================
@@ -58,7 +59,6 @@ header
 /*Styling the main heading*/
 header h1
 {
-    font-family:"Playfair Display",serif;
     font-size:44px;
     margin-bottom:12px;
     letter-spacing:1px; /*Provide space between the letter*/
@@ -175,7 +175,7 @@ ol
 }
 
 /*Styling the individual project card */
-.project-card
+.project-card:hover
 {
     background:white;
     flex: 1 1 30%; /*flex function*/
@@ -203,8 +203,8 @@ form
     margin-top:15px;
 }
  
-input,
-textarea
+input:hover,
+textarea:hover
 {
     padding:12px;
     border:1px solid #fecdd3;
@@ -230,7 +230,8 @@ textarea
 /*====================
     Buttons Styling
 ======================*/
-button
+button,
+#addBtn
 {
     padding:12px;
     border:none;
@@ -274,9 +275,9 @@ footer a:hover
     text-decoration:underline;
 }
 
-/*====================
-    Responsive
-======================*/
+/*==============================
+    Responsive for mobile view
+=================================*/
 /*Mobile View*/
 @media(max-width:768px)
 {

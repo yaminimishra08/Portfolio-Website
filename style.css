@@ -5,6 +5,11 @@
 /*Playfair Display for heading & Poppins for body */
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap");
 
+h1, h2 {
+  font-family:'Playfair Display', serif; /*Google fonts*/
+}
+
+/*Styling body of the page*/
 * {
     margin:0;
     padding:0;
@@ -12,82 +17,85 @@
 }
 
 /*=====================
-    Body Styling
+    Main Body Styling
 =======================*/
 body
 {
     /*Sets overall background & font */
-    font-family:"Poppins",sans-serif;
-    background-color: #fff1f2;
+    font-family:"Poppins",sans-serif; /*Google Fonts*/
+    background-color: #fff1f2; /*Sets overall background color*/
     color:#3f3f46;
     line-height:1.6;
 }
 
-/*=========================
+/*==========================
 Center main layout content
 ============================*/
 section,
 header,
 nav,
-footer
+footer,
+main
 {
     max-width: 1100px;
-    margin:auto;
+    margin: auto;
 }
 
-/*=====================
-    Header Section
-======================*/
+/*==============================
+    Styling the header Section
+================================*/
 header
 {
-    background: linear-gradient(135deg,#fb7185,#fda4af);
+    background: linear-gradient(135deg,#fb7185,#fda4af); /*Setting a color*/
     color:white;
-    text-align: center;
+    text-align: center; /*center the text*/
     padding: 60px 20px;
     margin-bottom: 15px;
 }
 
-/*Main Name Styling*/
+/*==============================
+    Styling the Header Section
+================================*/
+/*Styling the main heading*/
 header h1
 {
-    font-family:"Playfair Display",serif;
     font-size:44px;
     margin-bottom:12px;
-    letter-spacing:1px;
+    letter-spacing:1px; /*Provide space between the letter*/
     font-weight:700;
 }
 
-/* Tagline Styling */
+/* Styling the paragraph */
 header p
 {
     font-size:18px;
     font-weight:300;
 }
 
-/*======================
-    Navigation Bar
-========================*/
+/*===============================
+    Styling the navigation Bar
+=================================*/
 nav
 {
     background: #ee8a96;
     padding: 8px 0;
 }
 
-/* Unordered Lsit */
+/* Styling the nav */
 nav ul
 {
     display:flex; /* Using Flexbox */
-    justify-content:center;
+    justify-content:center; /*adjust the content in center */
     list-style:none;
 }
 
-/* List Styling */
+/* Styling the nav list Styling */
 nav li
 {
     margin: 12px 25px;
 }
 
-/* Style Navigation link*/
+/* Styling Navigation link*/
 nav a
 {
     text-decoration: none;
@@ -119,7 +127,7 @@ h2
     font-size:34px;
     color:#9f1239;
     margin-bottom:20px;
-    letter-spacing:1px;
+    letter-spacing:1px; /*gives space between the letter*/
 }
 
 /*Adds decorative elements*/
@@ -134,7 +142,7 @@ h2::after
     border-radius:2px;
 }
 
-/*all <p> inside section*/
+/*style all the <p> tag inside the section*/
 section p
 {
     margin-bottom:12px;
@@ -148,6 +156,7 @@ ol
     margin:8px 0 8px 25px;
 }
 
+/*Styling the button*/
 #benefitsList button
 {
     margin-left:10px;
@@ -161,22 +170,22 @@ ol
 .project-container
 { 
     display:flex; /*Flexbox*/
-    gap:20px;
-    flex-wrap:wrap;
+    gap:20px; /*Gives gap between the project*/
+    flex-wrap:wrap; /*Flex function*/
 }
 
-/*individual project card styling*/
-.project-card
+/*Styling the individual project card */
+.project-card:hover
 {
     background:white;
-    flex: 1 1 30%;
+    flex: 1 1 30%; /*flex function*/
     padding:20px;
     border-radius:14px;
-    box-shadow: 0 4px 20px rgba(251,113,133,0.3);
-    transition: transform 0.3s ease;
+    box-shadow: 0 4px 20px rgba(251,113,133,0.3); 
+    transition: transform 0.3s ease; /*animation when styles change*/
 }
 
-/*links inside the project car*/
+/*styling the links inside the project car*/
 .project-card a:hover 
 {
     text-decoration:underline;
@@ -188,14 +197,14 @@ ol
 form
 {
     box-shadow: 0 4px 20px rgba(251,113,133,0.3);
-    display:flex;
+    display:flex; /*Flexbox*/
     flex-direction:column;
-    gap:15px;
+    gap:15px; /*maintains a gap between the box*/
     margin-top:15px;
 }
  
-input,
-textarea
+input:hover,
+textarea:hover
 {
     padding:12px;
     border:1px solid #fecdd3;
@@ -211,16 +220,18 @@ textarea:focus
     border-color:#fb7185;
 }
 
+/*Styling the text area*/
 textarea
 {
     min-height:120px;
     resize:vertical;
 }
 
-/*=================
+/*====================
     Buttons Styling
-===================*/
-button
+======================*/
+button,
+#addBtn
 {
     padding:12px;
     border:none;
@@ -229,7 +240,7 @@ button
     color:white;
     font-weight:600;
     cursor:pointer;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /*animation when styles change*/
 }
 
 button:hover
@@ -264,9 +275,9 @@ footer a:hover
     text-decoration:underline;
 }
 
-/*====================
-    Responsive
-======================*/
+/*==============================
+    Responsive for mobile view
+=================================*/
 /*Mobile View*/
 @media(max-width:768px)
 {

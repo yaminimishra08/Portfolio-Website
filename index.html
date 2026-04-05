@@ -27,11 +27,11 @@
     </header>
 
     <!--Navigation Menu -->
-    <nav>
+    <nav aria-label="Main navigation">
         <ul>
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
-            <li><a href="#project">Project</a></li>
+            <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
@@ -39,6 +39,7 @@
     <!--====================
             Home Section 
     ========================-->
+    <main>
     <section id ="home">
         <!-- Paragraph describing Hobby -->
         <h2>Exploring New Technologies</h2>
@@ -53,8 +54,9 @@
         </ol>    
 
         <!-- Adds new benefits of the Hobby in the list -->
-        <input type="text" id="hobbyInput" placeholder="Enter Benefits">
-        <button id="addBtn">Add Benefits</button>
+       <label for="hobbyInput">Add a benefit</label>
+       <input type="text" id="hobbyInput" placeholder="Add a new benefit">
+       <button id="addBtn" aria-label="Add benefit to list">Add Benefits</button>
     </section>
 
     <!--======================
@@ -71,9 +73,9 @@
     </section>
 
     <!--=========================
-            Project Section 
+            Projects Section 
     =============================-->
-    <section id="project">
+    <section id="projects">
         <!-- Showcasing three projects -->
         <h2>Projects</h2>
         <div class="project-container">
@@ -81,21 +83,21 @@
             <div class="project-card">
                 <h3>Timer-Challenge</h3>
                 <p>A simple and interactive timer applicaton that allows users to start, pause, and reset timer-based challenges.</p>
-                <a href="https://github.com/yaminimishra08/Timer-Challenge">View Project</a>
+                <a href="https://github.com/yaminimishra08/Timer-Challenge/tree/main" aria-label="View Timer Challenge project">View Project</a>
             </div>
             
             <!-- Project Two -->
             <div class="project-card">
                 <h3>FAQ</h3>
                 <p>A responsive FAQ section designed to display commonly asked questions.</p>
-                <a href="https://github.com/yaminimishra08/FAQ">View Project</a>
+                <a href="https://yaminimishra08.github.io/FAQ/" aria-label="View FAQ">View Project</a>
             </div>
             
             <!-- Project Three -->    
             <div class="project-card">
                 <h3>Capstone Project</h3>
                 <p>Capstone Project: Money Manager App for tracking income and expenses, categorizing transactions, and generating financial summaries using HTML, CSS, and JavaScript.</p>
-                <a href="https://github.com/yaminimishra08/Capstone-Project">View Project</a>
+                <a href="https://yaminimishra08.github.io/Money-Manager-App/" aria-label="View Capstone Project">View Project</a>
             </div>
         </div>
     </section>
@@ -108,23 +110,27 @@
 
         <!-- Simple Form -->
         <form>
-            <input type="text" placeholder="Name" required>
-            <input type="email" placeholder="Email Id" required>
-            <textarea placeholder="Message" required></textarea>
+            <label for="name">Your Name</label>
+            <input id="name" type="text" placeholder="Your Name" required>
+            <label for="email">Your Email</label>
+            <input id="email" type="email" placeholder="Your Email" required>
+            <label for="message">Your Message</label>
+            <textarea id="message" placeholder="Your Message" required></textarea>
             <button type="submit">Submit</button>
         </form>
     </section>
+</main>
 
 <!-- =================
     Footer Section
  =====================-->
 <footer>
     <p>&copy; 2026 Yamini Mishra. All rights reserved.</p>
-    <a href="https://www.linkedin.com/in/yaminimishra0804/">LinkedIn</a>
-    <a href="https://github.com/yaminimishra08/">GitHub</a>
+    <a href="https://www.linkedin.com/in/yaminimishra0804/" aria-label="Visit my LinkedIn profile">LinkedIn</a>
+    <a href="https://github.com/yaminimishra08/" aria-label="Visit my GitHub profile">GitHub</a>
 
     <!-- Ads Current Date and Time-->
-    <p>Current Date & Time:<span id="datetime"></span></p>
+    <p><span id="datetime" aria-live="polite"></span></p>
 </footer>
 
 <!-- Links external JS file -->
